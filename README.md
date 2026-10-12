@@ -1,6 +1,6 @@
 # Multi-Level Cache System
 
-A Python implementation of a three-level cache system completed as part of Penn State's CMPSC 132 coursework.
+A three-level cache system implemented in Python using object-oriented programming and doubly linked lists.
 
 ## Overview
 
@@ -43,6 +43,4 @@ The assignment provided the class framework for `Node`, `ContentItem`, `CacheLis
 
 ## Academic Context
 
-Completed as a coursework assignment for CMPSC 132 — Programming and Computation II at The Pennsylvania State University.
-
-This repository documents my implementation of the assigned methods within the provided framework.
+This project was completed as part of Penn State's CMPSC 132 coursework. do i have to change the readme in github
