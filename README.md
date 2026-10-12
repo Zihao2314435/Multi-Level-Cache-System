@@ -43,4 +43,4 @@ The assignment provided the class framework for `Node`, `ContentItem`, `CacheLis
 
 ## Academic Context
 
-This project was completed as part of Penn State's CMPSC 132 coursework. do i have to change the readme in github
+This project was completed as part of Penn State's CMPSC 132 coursework.
