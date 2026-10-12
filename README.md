@@ -1,44 +1,48 @@
 # Multi-Level Cache System
 
-A three-level cache system implemented in Python using object-oriented programming and doubly linked lists.
+A Python implementation of a three-level cache system completed as part of Penn State's CMPSC 132 coursework.
 
 ## Overview
 
-This project implements a cache hierarchy consisting of L1, L2, and L3 cache levels. It supports content insertion, retrieval, updates, and eviction while tracking cache capacity and available space.
+This project implements cache operations across three levels (L1, L2, and L3), using object-oriented programming and doubly linked lists. The assignment provided the overall class structure, and I implemented the designated methods marked `YOUR CODE STARTS HERE`.
 
-A custom hashing mechanism based on content headers determines the appropriate cache level for each item. Each cache list uses a doubly linked list to organize stored content and support different eviction policies.
+My contributions focused on implementing cache operations, managing linked-list pointers, tracking capacity, and handling cache insertion, retrieval, updates, and eviction.
 
-## Features
+## Features Implemented
 
-- Three-level cache hierarchy (L1, L2, and L3)
-- Doubly linked list-based cache storage
-- Content insertion and retrieval
-- Content updates
-- LRU (Least Recently Used) eviction
-- MRU (Most Recently Used) eviction
-- Cache clearing
-- Capacity and remaining-space tracking
-- Custom hashing and equality behavior
-- Doctest-based testing
+- Custom hashing based on content headers to determine cache placement
+- Doubly linked list operations for cache storage
+- Content insertion with capacity and duplicate checks
+- Cache retrieval and movement of accessed items to the front
+- Content updates with capacity validation
+- LRU (Least Recently Used) and MRU (Most Recently Used) eviction
+- Cache clearing and capacity tracking
+- Cache hierarchy operations for insertion, retrieval, and updates
 
-## Technologies
+## Technologies and Concepts
 
 - Python
 - Object-Oriented Programming
 - Doubly Linked Lists
-- Hashing
+- Hashing and Equality
 - Data Structures
-- Doctest
+- Cache Management
+- LRU and MRU Replacement Policies
 
 ## Implementation
 
-The system is organized into four main components:
+The assignment provided the class framework for `Node`, `ContentItem`, `CacheList`, and `Cache`. I implemented the designated methods within these classes, including:
 
-- **`Node`** - Represents an individual node in a doubly linked list, with links to the next and previous nodes.
-- **`ContentItem`** - Stores content ID, size, header, and content data, with custom hashing and equality behavior.
-- **`CacheList`** - Manages linked-list storage, capacity, insertion, updates, and LRU/MRU eviction.
-- **`Cache`** - Manages the three-level cache hierarchy and routes content to the appropriate cache level.
+- **`ContentItem.__hash__`** — Calculates a hash value from the content header.
+- **`CacheList.put`** — Handles insertion, duplicate detection, capacity checks, and eviction.
+- **`CacheList.__contains__`** — Searches for content by ID and moves accessed items to the front.
+- **`CacheList.update`** — Updates stored content while maintaining capacity and list order.
+- **`CacheList.mruEvict` and `CacheList.lruEvict`** — Remove the most recently or least recently used item.
+- **`CacheList.clear`** — Resets the list and its capacity tracking.
+- **`Cache.insert`, `Cache.__getitem__`, and `Cache.__setitem__`** — Implement cache-level selection and hierarchy operations.
 
 ## Academic Context
 
-This project was completed as part of Penn State's CMPSC 132 coursework.
+Completed as a coursework assignment for CMPSC 132 — Programming and Computation II at The Pennsylvania State University.
+
+This repository documents my implementation of the assigned methods within the provided framework.
